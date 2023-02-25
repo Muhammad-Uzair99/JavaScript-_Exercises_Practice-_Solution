@@ -1,0 +1,29 @@
+<!--Write a JavaScript program to print the contents of the current window.-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise02</title>
+    </head>
+    <body>
+        <h3>Ex#02. Write a JavaScript program to print the contents of the current window.</h3>
+        <h4>Result:</h4>
+        <button id="printBTN">Print</button> <br> <br>
+        <button id="linkBTN">ViewCode</button>
+        <script>
+            /*
+            Write a JavaScript program to print the contents of the current window.
+            */
+           
+           const printBtn = document.getElementById("printBTN");
+           printBtn.addEventListener("click", () => window.print());
+           printBtn.style.color = "red";
+
+           const linkBtn = document.getElementById("linkBTN");
+           linkBtn.style.color = "blue";
+           linkBtn.addEventListener("click", () => window.open('https://github.com/Muhammad-Uzair99/JavaScript-_Exercises_Practice-_Solution/blob/main/Basic/Ex02.html', '_blank'))
+        
+        </script>
+    </body>
+</html>
