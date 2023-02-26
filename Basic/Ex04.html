@@ -1,0 +1,64 @@
+<!--
+    Write a JavaScript program to find the area of a triangle where 
+    lengths of the three of its sides are 5, 6, 7
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise04</title>
+    </head>
+    <body>
+        <h3>Ex#04. Write a JavaScript program to find the area of a triangle where 
+            lengths of the three of its sides are 5, 6, 7
+        </h3>
+        
+        <form>
+            <fieldset>
+                Enter The Lengths Of Three Sides.<br>
+                <label for="side1">1st Length:</label>
+                <input id = "side1" type = "number" name="side1" placeholder="5">
+                <br>
+                <label for="side1">2nd Length:</label>
+                <input id = "side2" type = "number" name="side2" placeholder="6">
+                <br>
+                <label for="side1">3rd Length:</label>
+                <input id = "side3" type = "number" name="side3" placeholder="7">
+            </fieldset>
+            <input type="button" value="Calculate" onclick="area()">
+        </form>
+        <h4>Result:</h4>
+        <p id="result"></p>
+        <button id="button">ViewCode</button></a>
+        <script>
+            /*
+            Write a JavaScript program to find the area of a triangle where 
+            lengths of the three of its sides are 5, 6, 7
+            */
+           function area() {
+
+            let side1 = parseInt(document.getElementById("side1").value),
+                side2 = parseInt(document.getElementById("side2").value),
+                side3 = parseInt(document.getElementById("side3").value);
+
+            let s = (side1 + side2 + side3) / 2;
+            let triArea;
+
+            if (side1 + side2 > side3 && side1 < side2 + side3 && side1 + side3 > side2){
+                triArea = `Area Of Triangle is: ${(Math.sqrt(s * (s - side1)*(s - side2)*(s - side3))).toFixed(2)}`;
+            } else {
+                triArea = `Invalid Triangle`;
+            }
+
+            console.log(triArea);
+
+            document.getElementById("result").innerHTML = `${triArea}`;
+           }
+           const myButton = document.getElementById("button");
+           myButton.style.color = "blue"
+           myButton.addEventListener("click", () => window.open('https://github.com/Muhammad-Uzair99/JavaScript-_Exercises_Practice-_Solution/blob/main/Basic/Ex04.html', '_blank'))
+
+           console.log(`${side1 * side2 * side3}`);
+        </script>
+    </body>
+</html>
